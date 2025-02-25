@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Ozon: Deliver to drop points highlighter",
+  "version": "1.0",
+  "description": "Плагин написан для людей, которые забывают проверить куда установлена текущая доставка в Ozon. Если выбран самовывоз (пункт доставки Ozon), то окрашивает кнопки и виджет доставки в красный цвет",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.ozon.ru/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.ozon.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
